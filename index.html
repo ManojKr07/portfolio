@@ -7,78 +7,121 @@
     <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/regional-indicator-symbol-letter-m-emoji-256x256-s940bjjz.png" type="image/x-icon">
 </head>
 <style>
-    body{
-        display:flex;
-        justify-content: space-around;
+    *{
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
         align-items: center;
+        min-height: 100vh;
         background-image: url("https://media.istockphoto.com/id/686305058/vector/photo-studio-room-empty-white-interior-vector-template-illustration-vector-illustration.jpg?s=612x612&w=0&k=20&c=rxfZaiLcaIsf9peQDbzitSRCAFgtL3NGGUEM-7lYLiM=");
         background-repeat: no-repeat;
-        background-size: 100% 100vh;
-        
+        background-size: cover;
+        margin: 0;
+        padding: 20px;
     }
-    #maincontainer{
-        height: 400px;
-        width: 80%;
+
+    #maincontainer {
+        width: 90%;
+        max-width: 1200px;
         background-image: url("https://img.freepik.com/free-vector/creative-geometric-design-space_53876-89787.jpg");
         background-repeat: no-repeat;
-        background-size: 100% 100%;
-        padding: 60px;
+        background-size: cover;
+        padding: 40px;
         border-radius: 40px;
-        margin-top: 60px;
+        margin-top: 40px;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
     }
-    #myimage{
-        height: 300px;
-        width: 300px;
+
+    #myimage {
+        height: 250px;
+        width: 250px;
         background-color: white;
         background-image: url("my_image.jpg");
         background-repeat: no-repeat;
-        background-size: 300px 300px;
-        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin: 20px;
     }
-    #about{
-        height: 450px;
-        width: 700px;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
-    h1{
-        color: white;
-        font-family: CAMBRIA;
-        text-align: justify;
-        font-size: 26pt;
-    }
-    h3,p,ul{
-        color: white;
-        font-family: CAMBRIA;
-        text-align: justify;
-        font-size: 15pt;
-    }
-    @media only screen and (max-width: 600px) {
-  .item1 {grid-area: 1 / span 6;}
-  .item2 {grid-area: 2 / span 6;}
-  .item3 {grid-area: 3 / span 6;}
-  .item4 {grid-area: 4 / span 6;}
-  .item5 {grid-area: 5 / span 6;}
-}
 
-@media only screen and (min-width: 600px) {
-  .item1 {grid-area: 1 / span 6;}
-  .item2 {grid-area: 2 / span 1;}
-  .item3 {grid-area: 2 / span 4;}
-  .item4 {grid-area: 3 / span 6;}
-  .item5 {grid-area: 4 / span 6;}
-}
+    #about {
+        flex: 1;
+        min-width: 280px;
+        max-width: 700px;
+        margin: 20px;
+    }
 
-@media only screen and (min-width: 768px) {
-  .item1 {grid-area: 1 / span 6;}
-  .item2 {grid-area: 2 / span 1;}
-  .item3 {grid-area: 2 / span 4;}
-  .item4 {grid-area: 2 / span 1;}
-  .item5 {grid-area: 3 / span 6;}
-}
+    h1, h3, p, ul {
+        color: white;
+        font-family: Cambria, serif;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    p, ul {
+        font-size: 1em;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+        #maincontainer {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        #myimage {
+            height: 200px;
+            width: 200px;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1em;
+        }
+
+        p, ul {
+            font-size: 0.9em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 0.9em;
+        }
+
+        p, ul {
+            font-size: 0.8em;
+        }
+
+        #myimage {
+            height: 150px;
+            width: 150px;
+        }
+    }
 </style>
 <body>
     <div id="maincontainer">
