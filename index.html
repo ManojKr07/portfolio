@@ -1,224 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My-Profile</title>
-    <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/regional-indicator-symbol-letter-m-emoji-256x256-s940bjjz.png" type="image/x-icon">
-</head>
-<style>
-    /* Base Styles (apply to all devices first) */
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My-Profile</title>
+  <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/regional-indicator-symbol-letter-m-emoji-256x256-s940bjjz.png" type="image/x-icon"/>
+  <style>
+    /* === Base Styles (Desktop-first approach) === */
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("https://media.istockphoto.com/id/1305427081/photo/blue-abstract-backgrounds.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     #maincontainer {
-        height: 80vh;
-        width: 80%;
-        background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0 auto;
-        border-radius: 20px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+      width: 80%;
+      height: 80vh;
+      background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 20px;
     }
 
     #myimage {
-        height: 300px;
-        width: 300px;
-        background-image: url("my_image.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 50%;
+      height: 300px;
+      width: 300px;
+      background-image: url("my_image.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 50%;
     }
 
     #about {
-        height: auto;
-        width: 600px;
+      width: 600px;
     }
 
     h1 {
-        font-size: 3rem;
-        font-family: cursive;
+      font-size: 3rem;
+      font-family: cursive;
     }
 
     h3 {
-        font-size: 1.5em;
+      font-size: 1.5em;
     }
 
-    p {
-        text-align: justify;
-        font-family: cambria;
-        font-size: 14px;
-    }
-    ul{
-        text-align: justify;
-        font-family: cambria;
-        font-size: 14px;
+    p, ul {
+      font-family: Cambria;
+      font-size: 14px;
+      text-align: justify;
     }
 
-    /* Mobile Devices (max-width: 600px) */
+    /* === Mobile Devices (max-width: 600px) === */
     @media only screen and (max-width: 600px) {
-        body {
-            height: 100vh;
-            width: 100%;
-            background-image: url("https://media.istockphoto.com/id/1305427081/photo/blue-abstract-backgrounds.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      #maincontainer {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        padding: 20px;
+      }
 
-        #maincontainer {
-            flex-direction: column;
-            width: 95%;
-            height: auto;
-            padding: 20px;
-        }
+      #about {
+        width: 90%;
+        text-align: center;
+      }
 
-        #about {
-            width: 90%;
-            text-align: center;
-        }
+      #myimage {
+        margin-bottom: 20px;
+        width: 250px;
+        height: 250px;
+      }
 
-        #myimage {
-            margin-bottom: 20px;
-        }
-        h1 {
-        font-size: 3rem;
-        font-family: cursive;
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
     }
 
-    h3 {
-        font-size: 1.5em;
-    }
+    /* === Tablet Devices (min-width: 601px and max-width: 1024px) === */
+    @media only screen and (min-width: 601px) and (max-width: 1024px) {
+      #maincontainer {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 30px;
+      }
 
-    p {
-        text-align: justify;
-        font-family: cambria;
-        font-size: 14px;
-    }
-    ul{
-        text-align: justify;
-        font-family: cambria;
-        font-size: 14px;
-    }
+      #about {
+        width: 90%;
+        text-align: center;
+      }
 
+      #myimage {
+        margin-bottom: 20px;
+      }
     }
-
-    /* Tablet Devices (max-width: 1024px) */
-    @media only screen and (max-width: 1024px) and (min-width: 601px) {
-        body {
-            height: 100vh;
-            width: 100%;
-            background-image: url("https://media.istockphoto.com/id/1305427081/photo/blue-abstract-backgrounds.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #maincontainer {
-            flex-direction: column;
-            width: 90%;
-            height: auto;
-            padding: 20px;
-        }
-
-        #about {
-            width: 90%;
-        }
-
-        #myimage {
-            margin-bottom: 20px;
-        }
-        h1 {
-        font-size: 3rem;
-        font-family: cursive;
-    }
-
-    h3 {
-        font-size: 1.5em;
-    }
-
-    p {
-        text-align: justify;
-        font-family: cambria;
-        font-size: 14px;
-    }
-    ul{
-        text-align: justify;
-        font-family: cambria;
-        font-size: 14px;
-    }
-
-    }
-
-    /* Desktop Devices (min-width: 1025px) */
-    @media only screen and (min-width: 1025px) {
-        body {
-            height: 100vh;
-            width: 100%;
-            background-image: url("https://media.istockphoto.com/id/1305427081/photo/blue-abstract-backgrounds.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #maincontainer {
-            flex-direction: row;
-            width: 80%;
-            height: 80vh;
-        }
-
-        #about {
-            width: 600px;
-        }
-
-        #myimage {
-            margin: 0;
-        }
-        h1 {
-        font-size: 3rem;
-        font-family: cursive;
-    }
-
-    h3 {
-        font-size: 1.5em;
-    }
-
-    p {
-        text-align: justify;
-        font-family: cambria;
-        font-size: 14px;
-    }
-    ul{
-        text-align: justify;
-        font-family: cambria;
-        font-size: 14px;
-    }
-
-    }
-</style>
+  </style>
+</head>
 <body>
-    <div id="maincontainer">
-        <div id="myimage"></div>
-        <div id="about">
-            <h1>MANOJ K R</h1>
-            <h3>Enthusiastic in Web-Technologies | Core-Java & Python Basics | Arduino IDE & VS-Code</h2>
-            <hr> 
-            <p>I'm a passionate and driven final year engineering student with a strong interest in technology and innovation. Throughout my academic journey, I’ve developed a solid foundation in core Java concepts and gained hands-on experience with web technologies, including front-end and back-end development. I also have a working knowledge of Python programming and its applications in various tech domains.</p>
-            <ul>
-                <li>Frontend Technologies:HTML5, Cascading Style Sheets(CSS)</li>
-                <li>Development: Java (core), Python (Basics)</li>
-                <li>Softwares:VS-Code, Eclipse, Python IDLE, PyCharm IDLE, Arduino IDE.</li>
-            </ul>
-        </div>
+  <div id="maincontainer">
+    <div id="myimage"></div>
+    <div id="about">
+      <h1>MANOJ K R</h1>
+      <h3>Enthusiastic in Web-Technologies | Core-Java & Python Basics | Arduino IDE & VS-Code</h3>
+      <hr />
+      <p>
+        I'm a passionate and driven final year engineering student with a strong interest in technology and innovation. Throughout my academic journey, I’ve developed a solid foundation in core Java concepts and gained hands-on experience with web technologies, including front-end and back-end development. I also have a working knowledge of Python programming and its applications in various tech domains.
+      </p>
+      <ul>
+        <li>Frontend Technologies: HTML5, Cascading Style Sheets (CSS)</li>
+        <li>Development: Java (core), Python (Basics)</li>
+        <li>Softwares: VS-Code, Eclipse, Python IDLE, PyCharm IDLE, Arduino IDE</li>
+      </ul>
     </div>
+  </div>
 </body>
 </html>
